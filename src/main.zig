@@ -44,6 +44,7 @@ fn getProblemMap(allocator: *Allocator) !ProblemMap {
 
     try pm.put("1", @import("problems/1.zig").problem);
     try pm.put("2", @import("problems/2.zig").problem);
+    try pm.put("3", @import("problems/3.zig").problem);
 
     return pm;
 }
@@ -55,4 +56,6 @@ test "getProblemMap" {
 
 test "problem tests" {
     _ = @import("problems/1.zig");
+    _ = @import("problems/2.zig");
+    _ = @import("problems/3.zig");
 }
