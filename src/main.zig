@@ -6,6 +6,8 @@ const expect = std.testing.expect;
 const StringHashMap = std.StringHashMap;
 const Allocator = std.mem.Allocator;
 
+pub const log_level: std.log.Level = .info;
+
 pub fn main() anyerror!void {
     var gpa = std.heap.GeneralPurposeAllocator(.{}){};
     defer {

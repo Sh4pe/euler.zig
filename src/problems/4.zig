@@ -38,7 +38,7 @@ pub fn problem(allocator: *Allocator, args: [][:0]u8) anyerror!void {
     info("largest palindrome: {}", .{largestPalindrome()});
 }
 
-test "problem 3" {
+test "problem 4" {
     expect((try largestPalindrome()) == 906609);
 }
 
