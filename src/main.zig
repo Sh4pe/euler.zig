@@ -43,6 +43,7 @@ fn getProblemMap(allocator: *Allocator) !ProblemMap {
     errdefer pm.deinit();
 
     try pm.put("1", @import("problems/1.zig").problem);
+    try pm.put("2", @import("problems/2.zig").problem);
 
     return pm;
 }
