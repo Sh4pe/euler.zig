@@ -6,7 +6,6 @@ const expect = std.testing.expect;
 const StringHashMap = std.StringHashMap;
 const Allocator = std.mem.Allocator;
 
-
 pub fn main() anyerror!void {
     var gpa = std.heap.GeneralPurposeAllocator(.{}){};
     defer {
@@ -32,10 +31,9 @@ pub fn main() anyerror!void {
     } else {
         info("First parameter needs to be the problem name", .{});
     }
-
 }
 
-const ProblemFn = fn(*Allocator, [][:0]u8) anyerror!void;
+const ProblemFn = fn (*Allocator, [][:0]u8) anyerror!void;
 const ProblemMap = StringHashMap(ProblemFn);
 
 fn getProblemMap(allocator: *Allocator) !ProblemMap {

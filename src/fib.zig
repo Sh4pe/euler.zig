@@ -1,4 +1,3 @@
-
 pub const FibIterator = struct {
     a: usize,
     b: usize,
@@ -6,7 +5,7 @@ pub const FibIterator = struct {
     const Self = @This();
 
     pub fn init(a: usize, b: usize) FibIterator {
-        return FibIterator { .a = a, .b = b };
+        return FibIterator{ .a = a, .b = b };
     }
 
     pub fn next(self: *Self) usize {
@@ -16,4 +15,3 @@ pub const FibIterator = struct {
         return nxt;
     }
 };
-

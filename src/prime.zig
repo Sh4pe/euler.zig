@@ -7,7 +7,7 @@ pub const PrimeFactorIterator = struct {
 
     pub fn init(N: usize) PrimeFactorIterator {
         std.debug.assert(N >= 2);
-        return PrimeFactorIterator { .remainder = N };
+        return PrimeFactorIterator{ .remainder = N };
     }
 
     pub fn next(self: *Self) ?usize {

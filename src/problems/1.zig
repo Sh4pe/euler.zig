@@ -8,7 +8,6 @@ fn sum(N: usize) usize {
     var i: usize = 1;
     var s: usize = 0;
     while (i < N) {
-
         if ((i % 3 == 0) or (i % 5 == 0)) {
             s += i;
         }
