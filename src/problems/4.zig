@@ -9,7 +9,7 @@ pub fn isPalindromic(N: usize) !bool {
     var str = try std.fmt.bufPrint(&buf, "{}", .{N});
 
     var i: usize = 0;
-    while (i < str.len/2) : ( i += 1 ) {
+    while (i < str.len / 2) : (i += 1) {
         if (str[i] != str[str.len - 1 - i]) {
             return false;
         }
@@ -24,7 +24,7 @@ fn largestPalindrome() !usize {
     while (i <= 999) : (i += 1) {
         var j: usize = 100;
         while (j <= 999) : (j += 1) {
-            var prod = i*j;
+            var prod = i * j;
             if (try isPalindromic(prod)) {
                 max = std.math.max(prod, max);
             }
